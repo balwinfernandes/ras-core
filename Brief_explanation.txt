@@ -1,0 +1,6 @@
+Live: https://ras-core.vercel.app · GitHub repo : https://github.com/<username>/ras-core
+
+RAS CORE is an AI agent that answers questions about the IEEE Robotics and Automation Society using only public information. It's built with Next.js and Google Gemini and deployed on Vercel. For each question the agent plans its steps and chooses from 5 tools: knowledge search, reading a full document, listing topics, the current date, and counting days. It can search several times, compare things, and work out deadlines, like the days left until ICRA 2027.
+
+The knowledge base is 9 documents from official RAS sources, split into sections and turned into Gemini embeddings. Search combines meaning-based matching with keyword ranking (BM25), merged using Reciprocal Rank Fusion. Answers only use what was retrieved, and each one shows its sources. If the sources don't cover a question, it says so instead of guessing. The interface shows a 3D knowledge map (Three.js) and an optional live trace of every tool call. It also has voice input and works on phones.
+
